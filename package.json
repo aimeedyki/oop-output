@@ -1,0 +1,17 @@
+{
+  "name": "oopoutput",
+  "version": "1.0.0",
+  "description": "a program that demonstrates OOP class",
+  "main": "oopcode.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "mocha tests/test.js"
+  },
+  "keywords": [
+    "OOP"
+  ],
+  "author": "Amarachi",
+  "license": "ISC"
+}
