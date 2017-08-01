@@ -19,8 +19,8 @@ class House {
     this.parlours+=parlours;
   }
   numberOfRooms(){
-    console.log("there are "+this.rooms+" rooms");
-  }
+    return "there are "+this.rooms+" rooms";
+     }
   get parlour(){
     return this.parlours;
   }
@@ -46,7 +46,7 @@ class House {
   }
   
   houseFeatures(){
-    console.log ("This house has"+this.rooms+" rooms, " + this.parlours+" parlors, and "+this.bathrooms+"bathrooms");
+    return "This house has "+this.rooms+" rooms, " + this.parlours+" parlors, and "+this.bathrooms+" bathrooms";
   }
   
 }
@@ -59,19 +59,18 @@ class Bungalow extends House{
   }
   
   cleanRooms(){
-    console.log(this.rooms+ " rooms have been cleaned");
+    return "" + this.rooms+ " rooms have been cleaned";
   }
 }
 
 
-class StoryBuilding extends House{
+class StoreyBuilding extends House{
     constructor(room, bathroom, parlour, floor, pentHouse){
      super(room, bathroom, parlour);
     this.floors= floor;
     this._pentHouse= pentHouse;
   }
   hasPenthouse(numPentHouse){
-    console.log(numPentHouse);
     if (numPentHouse === 0){
       return "no";
     }
@@ -80,7 +79,7 @@ class StoryBuilding extends House{
     }
   }
   houseFeatures(){
-    console.log ("This house has"+this.rooms+" rooms, " + this.parlours+" parlors,"+this.bathrooms+" bathrooms and "+this.floors+" floors with "+ this.hasPenthouse(this._pentHouse)+ " penthouse");
+    return "This house has "+this.rooms+" rooms, " + this.parlours+" parlors, "+this.bathrooms+" bathrooms and "+this.floors+" floors with "+ this.hasPenthouse(this._pentHouse)+ " penthouse";
   }
   
   
@@ -92,15 +91,13 @@ class SelfContained extends Bungalow{
   }
   hasBathroom(numBathrooms){
     if (numBathrooms === 0){
-      console.log("there are no bathroms");
+      return "there are no bathroms";
       }
     else{
-      console.log("there is a bathroom");
+      return "there is a bathroom";
     }
   }
 }
 
 module.exports = {House, Bungalow, StoreyBuilding, SelfContained};
-
-
 
